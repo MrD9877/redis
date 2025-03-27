@@ -1,12 +1,21 @@
 import fs from "node:fs";
 import path from "node:path";
-const parentDir = path.join(__dirname, "..");
-const grandParent = path.join(parentDir, "..");
-const grandGrandParent = path.join(parentDir, "..");
-const currentDir = process.cwd();
+const copypath = path.join(__dirname, "..");
+const dumpPath = process.cwd();
 
-export function makeFile() {
-  fs.copyFile(`${grandGrandParent}/tsfiles/tsconfig.json`, `${currentDir}/ts.json`, (err) => {
+export const choices: { [key: string]: string } = {
+  react: "reactconfig.json",
+  nextjs: "nextconfig.json",
+  nodejs: "nodeconfig.json",
+};
+
+export async function makeFile(ans: string) {
+  fs.copyFile(`${__dirname}/tsfiles/${choices[ans]}`, `${dumpPath}/ts.json`, (err) => {
     console.log(err);
   });
+}
+export function test() {
+  console.log(__dirname);
+  console.log(__filename);
+  console.log(dumpPath);
 }
