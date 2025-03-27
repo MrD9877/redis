@@ -1,5 +1,5 @@
 {
-  "name": "npm-node-package",
+  "name": "tsconfiger",
   "version": "1.0.0",
   "description": "add ts config file to project",
   "keywords": [
@@ -13,7 +13,7 @@
   "license": "ISC",
   "author": "dhuruv bansal",
   "type": "commonjs",
-  "main": "./dist/index.js",
+  "main": "./dist/src/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "files": [
@@ -21,7 +21,8 @@
   ],
   "scripts": {
     "build": "tsup",
-    "test": "jest"
+    "test": "jest",
+    "dev": "npx ts-node src/index"
   },
   "devDependencies": {
     "@types/jest": "^29.5.14",

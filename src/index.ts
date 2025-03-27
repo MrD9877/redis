@@ -1,3 +1,5 @@
-export function add(a: number, b: number) {
-  return a + b;
-}
+import { makeFile } from "./utility/CopyFiles";
+
+module.exports = {
+  makeFile,
+};
