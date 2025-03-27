@@ -1,6 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
-const copypath = path.join(__dirname, "..");
+const a = path.join(__dirname, "..");
+const copypath = path.join(a, "..");
 const dumpPath = process.cwd();
 
 export const choices: { [key: string]: string } = {
@@ -10,7 +11,7 @@ export const choices: { [key: string]: string } = {
 };
 
 export async function makeFile(ans: string) {
-  fs.copyFile(`${__dirname}/tsfiles/${choices[ans]}`, `${dumpPath}/ts.json`, (err) => {
+  fs.copyFile(`${copypath}/public/${choices[ans]}`, `${dumpPath}/ts.json`, (err) => {
     console.log(err);
   });
 }
