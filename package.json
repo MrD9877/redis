@@ -28,7 +28,6 @@
     "dev": "npx ts-node src/index"
   },
   "devDependencies": {
-    "@types/chalk-animation": "^1.6.3",
     "@types/jest": "^29.5.14",
     "copyfiles": "^2.4.1",
     "cpy-cli": "^5.0.0",
@@ -38,10 +37,5 @@
     "tsup": "^8.4.0",
     "typescript": "^5.8.2"
   },
-  "dependencies": {
-    "chalk": "^5.4.1",
-    "chalk-animation": "^2.0.3",
-    "inquirer": "^12.5.0",
-    "nanospinner": "^1.2.2"
-  }
+  "dependencies": {}
 }
