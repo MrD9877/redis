@@ -25,7 +25,8 @@
   "scripts": {
     "build": "tsc && copyfiles -u 1 src/public/* dist/",
     "test": "jest",
-    "dev": "npx ts-node src/index"
+    "dev": "npx ts-node src/index",
+    "start": "node dist/src/index"
   },
   "devDependencies": {
     "@types/jest": "^29.5.14",
@@ -37,5 +38,7 @@
     "tsup": "^8.4.0",
     "typescript": "^5.8.2"
   },
-  "dependencies": {}
+  "dependencies": {
+    "redis": "^4.7.0"
+  }
 }
